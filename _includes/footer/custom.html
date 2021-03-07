@@ -1,20 +1,16 @@
-<!-- start custom footer snippets -->
-<div class="page__footer-follow" style="width: auto;">
-    <div style="display: flex; align-items: first baseline; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-content: space-around;">
-        {%  for category in site.data.shortcuts.categories %}
-            <div style="vertical-align: top; border: none; " >
-                <ul class="social-icons" style="">
-                    <li > <a href={{ category.url }} > <b style="color: white; text-transform: none; font-size: 1em; font-weight: bold;"> {{ category.name }} </b> </a> </li>  <br>
-                    {% for reference in category.links %}
-                        {% if reference.external == true %}
-                            <li class=""> <a href="{{ reference.url | absolute_url }}" rel="permalink" style="color: white; text-transform: none; font-size: 1em; font-weight: normal;" target="_blank"> {{ reference.name }} </a> </li>  <br>
-                        {% else %}
-                            <li class=""> <a href={{category.base_url }}{{ reference.url }} style="color: white; text-transform: none; font-size: 1em; font-weight: normal;"> {{ reference.name }} </a> </li>  <br>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            </div>
+<!-- start footer/custom snippets -->
+<div class="ionio-footer">
+    {%  for category in site.data.shortcuts.categories %}
+    <ul class="ionio-footer-list">
+        <li><a class="ionio-footer-list__link--bold" href={{ category.url }}>{{ category.name }}</a></li>
+        {% for reference in category.links %}
+            {% if reference.external == true %}
+        <li class="ionio-footer-list__item"><a class="ionio-footer-list__link" href="{{ reference.url | absolute_url }}" rel="permalink" target="_blank">{{ reference.name }}</a></li>
+            {% else %}
+        <li classs="ionio-footer-list__item"><a class="ionio-footer-list__link" href={{ category.base_url }}{{ reference.url }}>{{ reference.name }}</a></li>
+            {% endif %}
         {% endfor %}
-    </div>
+    </ul>
+    {% endfor %}
 </div>
-<!-- end custom footer snippets -->
+<!-- end footer/custom snippets -->
