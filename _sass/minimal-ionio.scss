@@ -1,0 +1,31 @@
+.ionio-footer {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    
+    @include breakpoint(660px) {
+        flex-direction: row;
+    }
+}
+
+.ionio-footer-list {
+    padding: 0;
+    padding-left: 1rem;
+    list-style: none;
+
+    &__item {
+        display: block; 
+
+    }
+
+    &__link {
+        color: white;
+        text-transform: none;
+        font-size: 1em;
+        font-weight: normal;
+
+        &--bold {
+            font-weight: bold;
+        }
+    }
+}
