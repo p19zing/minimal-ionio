@@ -16,7 +16,9 @@
   <div class="archive__item">
     <div class="archive__item-body">
       {% if include.category %}
-          <h3>{{ cat }}</h3>
+          <a href="{{ site.url | relative_url }}">
+              <h3>{{ cat }}</h3>
+          </a>
       {% endif %}
       <a href="{{ site.url }}{{ site.baseurl }}{{ site.[include.id][i].url }}">
         
