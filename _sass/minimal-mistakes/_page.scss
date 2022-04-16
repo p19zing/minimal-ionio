@@ -245,7 +245,7 @@ body {
 
   iframe,
   object,
-  embed {
+  embed  {
     position: absolute;
     top: -80px;
     left: 0;
@@ -254,6 +254,13 @@ body {
     z-index: -2;
   }
   
+  img {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    z-index: -2;
+  }
 }
 
 .page__hero-image {
