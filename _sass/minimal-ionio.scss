@@ -34,3 +34,19 @@
   color: #40514e;
   text-decoration: underline rgb(64, 81, 78);
 }
+
+
+.backgroundvid{
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  max-width: 100%;
+    
+  img {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    z-index: -2;
+  }  
+}
